@@ -1,0 +1,89 @@
+<mvc:View controllerName="MyCars.MyCars.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page1" title="{i18n>title}" titleAlignment="Center">
+					<content>
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Adaugare Masina Noua" press="onAdd">
+							<TileContent>
+								<ImageContent src='sap-icon://add'/>
+							</TileContent>
+						</GenericTile>
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Garaj Masini" subheader="Masina mea" press="onList">
+							<TileContent>
+								<ImageContent src='./images/icon.png'/>
+							</TileContent>
+						</GenericTile>
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Verificare Asigurare Auto" subheader="RCA" press="onRCA">
+							<TileContent>
+								<ImageContent src='./images/car.png'/>
+							</TileContent>
+						</GenericTile>
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Verificare Polita CASCO" subheader="CASCO" press="onCASCO">
+							<TileContent>
+								<ImageContent src='./images/accident.png'/>
+							</TileContent>
+						</GenericTile>
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Verificare Rovinieta" subheader="Rovinieta"
+							press="onRovinieta">
+							<TileContent>
+								<ImageContent src='./images/road.png'/>
+							</TileContent>
+						</GenericTile>
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Inspectia Tehnica Periodica" subheader="ITP" press="onTest">
+							<TileContent>
+								<ImageContent src='./images/itp.png'/>
+							</TileContent>
+						</GenericTile>
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Rapoarte" press="onRaport">
+							<TileContent >
+								<NumericContent value="2" valueColor="Critical" withMargin="false"/>
+							</TileContent>
+						</GenericTile>
+						<!--<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Adaugare Carte De Identitate" press="onAddID">-->
+						<!--	<TileContent>-->
+						<!--		<ImageContent src='sap-icon://add'/>-->
+						<!--	</TileContent>-->
+						<!--</GenericTile>-->
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Carte De Identitate" subheader="Buletin" press="onID">
+							<TileContent>
+								<ImageContent src='./images/id.png'/>
+							</TileContent>
+						</GenericTile>
+						<!--<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Adaugare Pasaport" press="onAddPass">-->
+						<!--	<TileContent>-->
+						<!--		<ImageContent src='sap-icon://add' press="onAddPass1"/>-->
+						<!--	</TileContent>-->
+						<!--</GenericTile>-->
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Pasaport" subheader="Pasaport" press="onPass">
+							<TileContent>
+								<ImageContent src='./images/passport.png'/>
+							</TileContent>
+						</GenericTile>
+						<!--<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Adaugare Card De Credit" press="onAddCard">-->
+						<!--	<TileContent>-->
+						<!--		<ImageContent src='sap-icon://add'/>-->
+						<!--	</TileContent>-->
+						<!--</GenericTile>-->
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Card De Credit" subheader="Card" press="onCard">
+							<TileContent>
+								<ImageContent src='./images/card.png'/>
+							</TileContent>
+						</GenericTile>
+						<!--<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Adaugare Eveniment" press="onAddEvent">-->
+						<!--	<TileContent>-->
+						<!--		<ImageContent src='sap-icon://add'/>-->
+						<!--	</TileContent>-->
+						<!--</GenericTile>-->
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Evenimente" press="onEvent">
+							<TileContent>
+								<ImageContent src='./images/calendar.png'/>
+							</TileContent>
+						</GenericTile>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

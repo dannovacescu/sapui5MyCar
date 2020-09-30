@@ -1,0 +1,83 @@
+<mvc:View controllerName="MyCars.MyCars.controller.CASCO" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic"
+	xmlns:smartfield="sap.ui.comp.smartfield" xmlns:smartform="sap.ui.comp.smartform" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<semantic:FullscreenPage id="page5" title="{i18n>cascoPageTitle}" showNavButton="true" navButtonPress="onNavBack">
+		<SplitContainer id="FormSplitscreen1" initialDetail="page1" initialMaster="master1">
+			<detailPages>
+				<Page id="page9" showHeader="true">
+					<!--<customHeader>-->
+					<!--	<Bar>-->
+					<!--		<contentRight>-->
+					<!--			<Button id="edit" text="Edit" press="handleEditPress"/>-->
+					<!--			<Button id="save" text="Save" type="Emphasized" visible="false" press="handleSavePress"/>-->
+					<!--			<Button id="cancel" text="Cancel" visible="false" press="handleCancelPress"/>-->
+					<!--		</contentRight>-->
+					<!--	</Bar>-->
+					<!--</customHeader>-->
+					<VBox class="sapUiSmallMargin">
+						<f:Form id="FormDisplayCasco" editable="false">
+							<f:title>
+								<core:Title text="Informatii"/>
+							</f:title>
+							<f:layout>
+								<f:ResponsiveGridLayout labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="1" emptySpanL="1"
+									emptySpanM="1" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false"/>
+							</f:layout>
+							<f:formContainers>
+								<f:FormContainer>
+									<f:formElements>
+										<f:FormElement label="Nume">
+											<f:fields>
+												<Text text="{localModel>/Nume}" id="Nume"/>
+											</f:fields>
+										</f:FormElement>
+										<f:FormElement label="Prenume">
+											<f:fields>
+												<Text text="{localModel>/Prenume}" id="Prenume"/>
+											</f:fields>
+										</f:FormElement>
+										<f:FormElement label="Marca">
+											<f:fields>
+												<Text text="{localModel>/Marca}" id="marca"/>
+											</f:fields>
+										</f:FormElement>
+										<f:FormElement label="Numar de inmatriculare">
+											<f:fields>
+												<Text text="{localModel>/Numar}" id="numar"/>
+											</f:fields>
+										</f:FormElement>
+										<f:FormElement label="Asigurator CASCO">
+											<f:fields>
+												<Text text="{localModel>/Casco}" id="casco"/>
+											</f:fields>
+										</f:FormElement>
+										<f:FormElement label="Valabilitate CASCO">
+											<f:fields>
+												<Text text="{localModel>/DataCasco}" id="dCasco"/>
+											</f:fields>
+										</f:FormElement>
+									</f:formElements>
+								</f:FormContainer>
+							</f:formContainers>
+						</f:Form>
+					</VBox>
+				</Page>
+			</detailPages>
+			<masterPages>
+				<Page id="master1" title="Masini" icon="sap-icon://action" class="sapUiStdPage">
+					<content>
+						<List id="list" items="{garaj>/cars}">
+							<items>
+								<ObjectListItem title="{garaj>Id}" type="Active" press="handleMasterCasco">
+									<attributes>
+										<ObjectAttribute text="{garaj>Marca}"/>
+									</attributes>
+								</ObjectListItem>
+							</items>
+						</List>
+					</content>
+				</Page>
+			</masterPages>
+		</SplitContainer>
+	</semantic:FullscreenPage>
+</mvc:View>

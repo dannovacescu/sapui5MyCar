@@ -1,0 +1,85 @@
+<mvc:View controllerName="MyCars.MyCars.controller.Add" xmlns:mvc="sap.ui.core.mvc" height="100%" xmlns:semantic="sap.m.semantic"
+	xmlns:smartfield="sap.ui.comp.smartfield" xmlns:smartform="sap.ui.comp.smartform" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<semantic:FullscreenPage id="page2" title="{i18n>addPageTitle}" showNavButton="true" navButtonPress="onNavBack">
+		<semantic:content>
+			<!--<smartform:SmartForm id="form" editable="true" title="{i18n>formTitle}" class="sapUiResponsiveMargin">-->
+			<!--	<smartform:Group id="formGroup" label="{i18n>formGroupLabel}">-->
+			<!--		<smartform:GroupElement>-->
+			<!--			<smartfield:SmartField id="name"/>-->
+			<!--		</smartform:GroupElement>-->
+			<!--	</smartform:Group>-->
+			<!--</smartform:SmartForm>-->
+			<VBox class="sapUiSmallMargin">
+				<f:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" title="Informatii generale" labelSpanXL="3"
+					labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0"
+					columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+					<f:content>
+						<Label text="Nume"/>
+						<Input id="nume" value="{Nume}" required="true"/>
+						<Label text="Prenume"/>
+						<Input id="prenume" value="{Prenume}" required="true"/>
+						<Label text="Adresa de email"/>
+						<Input id="email" value="{email}" required="true"/>
+						<Label text="Marca"/>
+						<Input id="marca" value="{marca}" required="true"/>
+						<Label text="Numar de inmatriculare" required="true"/>
+						<Input id="numar" value="{Numar}"/>
+						<Label text="Serie motor"/>
+						<Input id="serie" value="{Serie}"/>
+						<Label text="Asigurator RCA"/>
+						<Input id="rca" value="{RCA}"/>
+						<Label text="Valabilitate RCA" required="true"/>
+						<DatePicker id="vrca" value="{ path:'/dateValue', type:'sap.ui.model.type.Date', formatOptions: { style: 'medium', strictParsing: true } }"/>
+						<Label text="Pret RCA" required="true"/>
+						<Input id="prca" value="{pRCA}"/>
+						<Label text="Asigurator CASCO"/>
+						<Input id="casco" value="{CASCO}"/>
+						<Label text="Valabilitate CASCO" required="true"/>
+						<DatePicker id="vcasco"
+							value="{ path:'/dateValue', type:'sap.ui.model.type.Date', formatOptions: { style: 'medium', strictParsing: true } }"/>
+						<Label text="Pret CASCO"/>
+						<Input id="pcasco" value="{pCasco}" required="true"/>
+						<Label text="Valabilitate Rovinieta" required="true"/>
+						<DatePicker id="rovinieta"
+							value="{ path:'/dateValue', type:'sap.ui.model.type.Date', formatOptions: { style: 'medium', strictParsing: true } }"/>
+						<Label text="Pret Rovineta"/>
+						<Input id="provinieta" value="{pRovinieta}" required="true"/>
+						<Label text="Valabilitate ITP" required="true"/>
+						<DatePicker id="itp" value="{ path:'/dateValue', type:'sap.ui.model.type.Date', formatOptions: { style: 'medium', strictParsing: true } }"/>
+						<Label text="Pret ITP"/>
+						<Input id="pitp" value="{pitp}" required="true"/>
+						<!--<Label text="Street/No."/>-->
+						<!--<Input value="{Street}"></Input>-->
+						<!--<Input value="{HouseNumber}">-->
+						<!--	<layoutData>-->
+						<!--		<l:GridData span="XL1 L2 M2 S4"/>-->
+						<!--	</layoutData>-->
+						<!--</Input>-->
+						<!--<Label text="ZIP Code/City"/>-->
+						<!--<Input value="{ZIPCode}">-->
+						<!--	<layoutData>-->
+						<!--		<l:GridData span="XL1 L2 M2 S4"/>-->
+						<!--	</layoutData>-->
+						<!--</Input>-->
+						<!--<Input value="{City}"/>-->
+						<!--<Label text="Country"/>-->
+						<!--<Select id="country" selectedKey="{Country}">-->
+						<!--	<items>-->
+						<!--		<core:Item text="England" key="England"/>-->
+						<!--		<core:Item text="Germany" key="Germany"/>-->
+						<!--		<core:Item text="USA" key="USA"/>-->
+						<!--	</items>-->
+						<!--</Select>-->
+					</f:content>
+				</f:SimpleForm>
+			</VBox>
+		</semantic:content>
+		<semantic:saveAction>
+			<semantic:SaveAction id="save" press="onSave"/>
+		</semantic:saveAction>
+		<semantic:cancelAction>
+			<semantic:CancelAction id="cancel" press="onCancel"/>
+		</semantic:cancelAction>
+	</semantic:FullscreenPage>
+</mvc:View>

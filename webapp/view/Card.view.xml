@@ -1,0 +1,72 @@
+<mvc:View controllerName="MyCars.MyCars.controller.Card" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic"
+	xmlns:smartfield="sap.ui.comp.smartfield" xmlns:smartform="sap.ui.comp.smartform" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<semantic:FullscreenPage id="page17" title="{i18n>CardPageTitle}" showNavButton="true" navButtonPress="onNavBack">
+		<SplitContainer id="FormSplitscreenCard" initialDetail="page4" initialMaster="master4">
+			<detailPages>
+				<Page id="pageCard" showHeader="true">
+					<customHeader>
+						<Bar>
+							<contentLeft>
+								<Button id="delete" text="Delete" press="handleDeletePress"/>
+							</contentLeft>
+							<contentRight>
+								<Button id="addButton" icon="sap-icon://add" press="AddCard"/>
+								<Button id="edit" text="Edit" press="handleEditPress"/>
+								<Button id="save" text="Save" type="Emphasized" visible="false" press="handleSavePress"/>
+								<Button id="cancel" text="Cancel" visible="false" press="handleCancelPress"/>
+							</contentRight>
+						</Bar>
+					</customHeader>
+					<!--<VBox class="sapUiSmallMargin">-->
+					<!--	<f:Form id="FormDisplayCard" editable="false">-->
+					<!--		<f:title>-->
+					<!--			<core:Title text="Informatii"/>-->
+					<!--		</f:title>-->
+					<!--		<f:layout>-->
+					<!--			<f:ResponsiveGridLayout labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="1" emptySpanL="1"-->
+					<!--				emptySpanM="1" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false"/>-->
+					<!--		</f:layout>-->
+					<!--		<f:formContainers>-->
+					<!--			<f:FormContainer>-->
+					<!--				<f:formElements>-->
+					<!--					<f:FormElement label="Nume">-->
+					<!--						<f:fields>-->
+					<!--							<Text text="{ModelCard>/Nume}" id="Nume"/>-->
+					<!--						</f:fields>-->
+					<!--					</f:FormElement>-->
+					<!--					<f:FormElement label="Prenume">-->
+					<!--						<f:fields>-->
+					<!--							<Text text="{ModelCard>/Prenume}" id="Prenume"/>-->
+					<!--						</f:fields>-->
+					<!--					</f:FormElement>-->
+					<!--					<f:FormElement label="Valabilitate">-->
+					<!--						<f:fields>-->
+					<!--							<Text text="{ModelCard>/Valabilitate}" id="Valabilitate"/>-->
+					<!--						</f:fields>-->
+					<!--					</f:FormElement>-->
+					<!--				</f:formElements>-->
+					<!--			</f:FormContainer>-->
+					<!--		</f:formContainers>-->
+					<!--	</f:Form>-->
+					<!--</VBox>-->
+				</Page>
+			</detailPages>
+			<masterPages>
+				<Page id="masterCard" title="Lista Carduri" icon="sap-icon://action" class="sapUiStdPage">
+					<content>
+						<List id="list" items="{card>/Cards}">
+							<items>
+								<ObjectListItem title="Card {card>Id}" type="Active" press="handleMasterList">
+									<attributes>
+										<ObjectAttribute text="{card>Nume} {card>Prenume}"/>
+									</attributes>
+								</ObjectListItem>
+							</items>
+						</List>
+					</content>
+				</Page>
+			</masterPages>
+		</SplitContainer>
+	</semantic:FullscreenPage>
+</mvc:View>

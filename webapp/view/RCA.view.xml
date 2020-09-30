@@ -1,0 +1,6 @@
+<mvc:View controllerName="MyCars.MyCars.controller.RCA" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic"
+	xmlns:smartfield="sap.ui.comp.smartfield" xmlns:smartform="sap.ui.comp.smartform" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml">
+	<semantic:FullscreenPage id="page4" title="{i18n>rcaPageTitle}" showNavButton="true" navButtonPress="onNavBack">
+		<html:iframe width="1300" height="1000" src="https://www.aida.info.ro/polite-rca" frameborder="0" allowfullscreen="true"/>
+	</semantic:FullscreenPage>
+</mvc:View>

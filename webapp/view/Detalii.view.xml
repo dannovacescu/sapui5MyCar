@@ -1,0 +1,63 @@
+<mvc:View controllerName="MyCars.MyCars.controller.Detalii" xmlns:mvc="sap.ui.core.mvc" height="100%" xmlns:semantic="sap.m.semantic"
+	xmlns="sap.suite.ui.microchart" xmlns:m="sap.m" xmlns:layout="sap.ui.layout">
+	<semantic:FullscreenPage id="page30" title="{i18n>detaliiPageTitle}" showNavButton="true" navButtonPress="onNavBack">
+		<layout:Grid defaultSpan="XL6 L6 M6 S12">
+			<layout:HorizontalLayout>
+				<layout:layoutData>
+					<layout:GridData span="XL12 L12 M12 S12"/>
+				</layout:layoutData>
+				<m:Text text="Pret RCA" class="sapUiSmallMargin"/>
+				<m:FlexBox width="20rem" height="10rem" alignItems="Center" class="sapUiSmallMargin">
+					<m:items>
+						<InteractiveLineChart id="ChartRCA" selectionChanged="selectionChanged" press="press" precedingPoint="20" points="{Masina>/Preturi}">
+							<points>
+								<InteractiveLineChartPoint value="{path: 'Masina>PretRca', formatter: '.formatter'}" label="{Masina>Anul}" color="Normal"/>
+							</points>
+						</InteractiveLineChart>
+					</m:items>
+				</m:FlexBox>
+				<layout:layoutData>
+					<layout:GridData span="XL12 L12 M12 S12"/>
+				</layout:layoutData>
+				<m:Text text="Pret ITP" class="sapUiSmallMargin"/>
+				<m:FlexBox width="20rem" height="10rem" alignItems="Center" class="sapUiSmallMargin">
+					<m:items>
+						<InteractiveLineChart id="ChartITP" selectionChanged="selectionChanged" press="press" precedingPoint="20" points="{Masina>/Preturi}">
+							<points>
+								<InteractiveLineChartPoint value="{path: 'Masina>PretItp', formatter: '.formatter'}" label="{Masina>Anul}" color="Normal"/>
+							</points>
+						</InteractiveLineChart>
+					</m:items>
+				</m:FlexBox>
+			</layout:HorizontalLayout>
+			<layout:HorizontalLayout>
+				<layout:layoutData>
+					<layout:GridData span="XL12 L12 M12 S12"/>
+				</layout:layoutData>
+				<m:Text text="Pret Casco" class="sapUiSmallMargin"/>
+				<m:FlexBox width="20rem" height="10rem" alignItems="Center" class="sapUiSmallMargin">
+					<m:items>
+						<InteractiveLineChart id="ChartCASCO" selectionChanged="selectionChanged" press="press" precedingPoint="20" points="{Masina>/Preturi}">
+							<points>
+								<InteractiveLineChartPoint value="{path: 'Masina>PretCasco', formatter: '.formatter'}" label="{Masina>Anul}" color="Normal"/>
+							</points>
+						</InteractiveLineChart>
+					</m:items>
+				</m:FlexBox>
+				<layout:layoutData>
+					<layout:GridData span="XL12 L12 M12 S12"/>
+				</layout:layoutData>
+				<m:Text text="Pret Rovinieta" class="sapUiSmallMargin"/>
+				<m:FlexBox width="20rem" height="10rem" alignItems="Center" class="sapUiSmallMargin">
+					<m:items>
+						<InteractiveLineChart id="ChartRovinieta" selectionChanged="selectionChanged" press="press" points="{Masina>/Preturi}">
+							<points>
+								<InteractiveLineChartPoint value="{path: 'Masina>PretRovinieta', formatter: '.formatter'}" label="{Masina>Anul}" color="Normal"/>
+							</points>
+						</InteractiveLineChart>
+					</m:items>
+				</m:FlexBox>
+			</layout:HorizontalLayout>
+		</layout:Grid>
+	</semantic:FullscreenPage>
+</mvc:View>

@@ -1,0 +1,320 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "MyCars.MyCars",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "MyCars.MyCars.view.Main",
+			"type": "XML",
+			"async": true,
+			"id": "Main"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "MyCars.MyCars.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "MyCars.MyCars.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"name": "RouteMain",
+					"pattern": "RouteMain",
+					"target": [
+						"TargetMain"
+					]
+				},
+				{
+					"pattern": "AddID",
+					"name": "addID",
+					"target": [
+						"addID"
+					]
+				},
+				{
+					"pattern": "AddCard",
+					"name": "addCard",
+					"target": [
+						"addCard"
+					]
+				},
+				{
+					"pattern": "AddPass",
+					"name": "addPass",
+					"target": [
+						"addPass"
+					]
+				},
+				{
+					"pattern": "AddCar",
+					"name": "add",
+					"target": [
+						"add"
+					]
+				},
+				{
+					"pattern": "AddEvent",
+					"name": "addEvent",
+					"target": [
+						"addEvent"
+					]
+				},
+				{
+					"pattern": "Garage",
+					"name": "list",
+					"target": [
+						"list"
+					]
+				},
+				{
+					"pattern": "RCA",
+					"name": "rca",
+					"target": [
+						"rca"
+					]
+				},
+				{
+					"pattern": "CASCO",
+					"name": "casco",
+					"target": [
+						"casco"
+					]
+				},
+				{
+					"pattern": "Rovinieta",
+					"name": "rovinieta",
+					"target": [
+						"rovinieta"
+					]
+				},
+				{
+					"pattern": "Rapoarte",
+					"name": "rapoarte",
+					"target": [
+						"rapoarte"
+					]
+				},
+				{
+					"pattern": "ID",
+					"name": "ID",
+					"target": [
+						"ID"
+					]
+				},
+				{
+					"pattern": "Card",
+					"name": "card",
+					"target": [
+						"card"
+					]
+				},
+				{
+					"pattern": "Pass",
+					"name": "pass",
+					"target": [
+						"pass"
+					]
+				},
+				{
+					"pattern": "Event",
+					"name": "event",
+					"target": [
+						"event"
+					]
+				},
+				{
+					"pattern": "Detalii",
+					"name": "detalii",
+					"target": [
+						"detalii"
+					]
+				},
+				{
+					"pattern": "Test",
+					"name": "test",
+					"target": [
+						"test"
+					]
+				},
+					{
+					"pattern": "MyRca",
+					"name": "myrca",
+					"target": [
+						"myrca"
+					]
+				},
+					{
+					"pattern": "MyRovinieta",
+					"name": "myrovinieta",
+					"target": [
+						"myrovinieta"
+					]
+				}
+			],
+			"targets": {
+				"TargetMain": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "MainView",
+					"viewName": "Main"
+				},
+				"add": {
+					"viewName": "Add",
+					"viewId": "add",
+					"viewLevel": 3
+				},
+				"addID": {
+					"viewName": "AddID",
+					"viewId": "addID",
+					"viewLevel": 3
+				},
+				"addCard": {
+					"viewName": "AddCard",
+					"viewId": "addCard",
+					"viewLevel": 3
+				},
+				"addPass": {
+					"viewName": "AddPass",
+					"viewId": "addPass",
+					"viewLevel": 3
+				},
+				"addEvent": {
+					"viewName": "AddEvent",
+					"viewId": "addEvent",
+					"viewLevel": 3
+				},
+				"list": {
+					"viewName": "List",
+					"viewId": "list",
+					"viewLevel": 3
+				},
+				"rca": {
+					"viewName": "RCA",
+					"viewId": "rca",
+					"viewLevel": 3
+				},
+				"casco": {
+					"viewName": "CASCO",
+					"viewId": "casco",
+					"viewLevel": 3
+				},
+				"rovinieta": {
+					"viewName": "Rovinieta",
+					"viewId": "rovinieta",
+					"viewLevel": 3
+				},
+				"rapoarte": {
+					"viewName": "Rapoarte",
+					"viewId": "rapoarte",
+					"viewLevel": 3
+				},
+				"ID": {
+					"viewName": "ID",
+					"viewId": "id",
+					"viewLevel": 3
+				},
+				"card": {
+					"viewName": "Card",
+					"viewId": "Card",
+					"viewLevel": 3
+				},
+				"pass": {
+					"viewName": "Pass",
+					"viewId": "pass",
+					"viewLevel": 3
+				},
+				"event": {
+					"viewName": "Event",
+					"viewId": "event",
+					"viewLevel": 3
+				},
+				"detalii": {
+					"viewName": "Detalii",
+					"viewId": "detalii",
+					"viewLevel": 3
+				},
+				"test": {
+					"viewName": "Test",
+					"viewId": "test",
+					"viewLevel": 3
+				},
+				"myrca": {
+					
+					"viewName": "MyRCA",
+					"viewId": "myrca",
+					"viewLevel": 3
+				},
+				"myrovinieta": {
+					"viewType": "XML",
+					"viewName": "MyRovinieta",
+					"viewId": "myrovinieta",
+					"viewLevel": 3
+				}
+			}
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
+}

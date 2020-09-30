@@ -1,0 +1,35 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="MyCars.MyCars.controller.Test"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page id="pageTESTS" title="{i18n>itpPageTitle}" titleAlignment="Center" showNavButton="true" navButtonPress="onNavBack">
+		<SplitContainer id="FormSplitscreenTest" initialDetail="pageTest" initialMaster="masterTest">
+			<detailPages>
+				<Page id="pageTest" showHeader="true">
+					<!--<customHeader>-->
+					<!--	<Bar>-->
+					<!--		<contentRight>-->
+					<!--			<Button id="edit" text="Edit" press="handleEditPress"/>-->
+					<!--			<Button id="save" text="Save" type="Emphasized" visible="false" press="handleSavePress"/>-->
+					<!--			<Button id="cancel" text="Cancel" visible="false" press="handleCancelPress"/>-->
+					<!--		</contentRight>-->
+					<!--	</Bar>-->
+					<!--</customHeader>-->
+				</Page>
+			</detailPages>
+			<masterPages>
+				<Page id="masterTest" title="Masini" titleAlignment="Center" icon="sap-icon://action" class="sapUiStdPage">
+					<content>
+						<List id="list" items="{garaj>/cars}">
+							<items>
+								<ObjectListItem title="{garaj>Id}" type="Active" press="handleMasterList">
+									<attributes>
+										<ObjectAttribute text="{garaj>Marca} {garaj>Numar}"/>
+									</attributes>
+								</ObjectListItem>
+							</items>
+						</List>
+					</content>
+				</Page>
+			</masterPages>
+		</SplitContainer>
+	</Page>
+</mvc:View>

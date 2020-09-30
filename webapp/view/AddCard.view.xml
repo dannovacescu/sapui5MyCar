@@ -1,0 +1,28 @@
+<mvc:View controllerName="MyCars.MyCars.controller.AddCard" xmlns:mvc="sap.ui.core.mvc" height="100%" xmlns:semantic="sap.m.semantic"
+	xmlns:smartfield="sap.ui.comp.smartfield" xmlns:smartform="sap.ui.comp.smartform" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<semantic:FullscreenPage id="page11" title="{i18n>addCardTitle}" showNavButton="true" navButtonPress="onNavBack">
+		<semantic:content>
+			<VBox class="sapUiSmallMargin">
+				<f:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" title="Informatii generale" labelSpanXL="3"
+					labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0"
+					columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+					<f:content>
+						<Label text="Nume"/>
+						<Input id="nume" value="{Nume}"/>
+						<Label text="Prenume"/>
+						<Input id="prenume" value="{Prenume}"/>
+						<Label text="Valabilitate Card"/>
+						<DatePicker id="card" value="{Card}"/>
+					</f:content>
+				</f:SimpleForm>
+			</VBox>
+		</semantic:content>
+		<semantic:saveAction>
+			<semantic:SaveAction id="save" press="onSave"/>
+		</semantic:saveAction>
+		<semantic:cancelAction>
+			<semantic:CancelAction id="cancel" press="onCancel"/>
+		</semantic:cancelAction>
+	</semantic:FullscreenPage>
+</mvc:View>

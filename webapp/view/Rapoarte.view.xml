@@ -1,0 +1,61 @@
+<mvc:View controllerName="MyCars.MyCars.controller.Rapoarte" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic"
+	xmlns:smartfield="sap.ui.comp.smartfield" xmlns:smartform="sap.ui.comp.smartform" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<semantic:FullscreenPage id="page10" title="{i18n>raportPageTitle}" showNavButton="true" navButtonPress="onNavBack">
+		<semantic:content>
+			<IconTabBar id="idIconTabBar" select="onQuickFilter" expandable="false" applyContentPadding="false">
+				<!--<items>-->
+				<!--	<IconTabFilter showAll="true" text="Toate masinile" key="All" count="4"/>-->
+				<!--	<IconTabSeparator/>-->
+				<!--	<IconTabFilter icon="sap-icon://insurance-car" iconColor="Positive" text="{i18n>rcaPageTitle}" key="rca" count="4"/>-->
+				<!--	<IconTabFilter icon="sap-icon://collision" iconColor="Critical" text="{i18n>cascoPageTitle}" key="casco" count="4"/>-->
+				<!--	<IconTabFilter icon="sap-icon://map-2" iconColor="Negative" text="{i18n>rovinietaPageTitle}" key="rovinieta" count="4"/>-->
+				<!--</items>-->
+				<content>
+					<Table id="table" items="{masini>/cars}">
+						<headerToolbar>
+							<!--<Toolbar>-->
+							<!--	<Title text="Masini" />-->
+							<!--	<ToolbarSpacer/>-->
+							<!--	<SearchField width="30%" search="onSearch">-->
+							<!--</Toolbar>-->
+							<OverflowToolbar>
+								<Title text="{i18n>TableTitle}" level="H3"/>
+								<ToolbarSpacer/>
+								<SearchField width="30%" search="onSearch"></SearchField>
+							</OverflowToolbar>
+						</headerToolbar>
+						<columns>
+							<Column id="marca" demandPopin="true" minScreenWidth="Tablet">
+								<Text text="{i18n>marca}" id="marca1"/>
+							</Column>
+							<Column id="itp" demandPopin="true" minScreenWidth="Tablet">
+								<Text text="ITP" id="ditp"/>
+							</Column>
+							<Column id="rca" demandPopin="false" minScreenWidth="Tablet">
+								<Text text="{i18n>rcaPageTitle}" id="dRca"/>
+							</Column>
+							<Column id="casco1" demandPopin="false" minScreenWidth="Tablet">
+								<Text text="{i18n>cascoPageTitle}" id="dCasco"/>
+							</Column>
+							<Column id="rov" demandPopin="false" minScreenWidth="Tablet">
+								<Text text="{i18n>rovinietaPageTitle}" id="dRovinieta"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem type="Navigation" press="onPress">
+								<cells>
+									<ObjectIdentifier title="{masini>Id}" text="{masini>Marca}" titleActive="true" titlePress="onShowDetailPopover"/>
+									<Text text="{masini>DataItp}"/>
+									<Text text="{masini>DataRca}"/>
+									<Text text="{masini>DataCasco}"/>
+									<Text text="{masini>DataRovinieta}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</IconTabBar>
+		</semantic:content>
+	</semantic:FullscreenPage>
+</mvc:View>
